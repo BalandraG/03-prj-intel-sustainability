@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -162,77 +165,136 @@
       </div>
     </article>
 
-    <article class="timeline-card">
-      <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <div class="card-display">
-      <img class="card-image" src="img/2022.jpg" alt="Image representing Intel's net-zero by 2040 commitment announced in 2022" />
-      <p class="desktop-description">
-        Intel announces its commitment to achieve net-zero greenhouse
-        gas emissions (Scope 1 and 2) across its global operations
-        by 2040, building on years of environmental initiatives.
-      </p>
-      <details class="card-details">
-      <summary>View details</summary>
-      <p>
-        Intel announces its commitment to achieve net-zero greenhouse 
-        gas emissions (Scope 1 and 2) across its global operations 
-        by 2040, building on years of environmental initiatives.
-      </p>
-      </details>
-      </div>
-    </article>
-
-    <article class="timeline-card">
-      <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <div class="card-display">
-      <img class="card-image" src="img/2023.jpg" alt="Image representing Intel's renewable electricity achievement in 2023" />
-      <p class="desktop-description">
-        The company achieves 99% renewable electricity usage worldwide,
-        helping to drastically lower carbon emissions and driving progress
-        toward Intel's long-term sustainability goals.
-      </p>
-      <details class="card-details">
-      <summary>View details</summary>
-      <p>
-        The company achieves 99% renewable electricity usage worldwide, 
-        helping to drastically lower carbon emissions and driving progress 
-        toward Intel's long-term sustainability goals.
-      </p>
-      </details>
-      </div>
-    </article>
-
-    <article class="timeline-card">
-      <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <div class="card-display">
-      <img class="card-image" src="img/2024.jpg" alt="Image representing Intel's Sustainability Summit in 2024" />
-      <p class="desktop-description">
-        Intel hosts its first Sustainability Summit, uniting suppliers,
-        government officials, and industry leaders to collaborate on
-        next-generation sustainable semiconductor manufacturing.
-      </p>
-      <details class="card-details">
-      <summary>View details</summary>
-      <p>
-        Intel hosts its first Sustainability Summit, uniting suppliers, 
-        government officials, and industry leaders to collaborate on 
-        next-generation sustainable semiconductor manufacturing.
-      </p>
-      </details>
-      </div>
-    </article>
-
     </div>
     <p class="timeline-instruction">Scroll to explore</p>
+  </section>
+
+  <section class="sustainability-section">
+    <div class="container">
+      <h2 class="sustainability-heading">Sustainability in Action</h2>
+      <div class="row g-4">
+        <div class="col-12 col-lg-4">
+          <article class="sustainability-item">
+            <i class="bi bi-cloud-sun sustainability-icon" aria-hidden="true"></i>
+            <h3>Net-Zero By 2040</h3>
+            <div class="sustainability-display">
+              <img class="sustainability-image" src="img/2022.jpg" alt="Image representing Intel's net-zero by 2040 commitment announced in 2022" />
+              <p class="sustainability-description">Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.</p>
+            </div>
+            <button class="btn sustainability-link" type="button" data-bs-toggle="modal" data-bs-target="#netZeroModal">Learn More</button>
+          </article>
+        </div>
+        <div class="col-12 col-lg-4">
+          <article class="sustainability-item">
+            <i class="bi bi-lightning-charge sustainability-icon" aria-hidden="true"></i>
+            <h3>Renewable Electricity</h3>
+            <div class="sustainability-display">
+              <img class="sustainability-image" src="img/2023.jpg" alt="Image representing Intel's renewable electricity achievement in 2023" />
+              <p class="sustainability-description">The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals.</p>
+            </div>
+            <button class="btn sustainability-link" type="button" data-bs-toggle="modal" data-bs-target="#renewableModal">Learn More</button>
+          </article>
+        </div>
+        <div class="col-12 col-lg-4">
+          <article class="sustainability-item">
+            <i class="bi bi-people sustainability-icon" aria-hidden="true"></i>
+            <h3>Sustainability Summit</h3>
+            <div class="sustainability-display">
+              <img class="sustainability-image" src="img/2024.jpg" alt="Image representing Intel's Sustainability Summit in 2024" />
+              <p class="sustainability-description">Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing.</p>
+            </div>
+            <button class="btn sustainability-link" type="button" data-bs-toggle="modal" data-bs-target="#summitModal">Learn More</button>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8 col-xl-7">
+          <h2 class="newsletter-heading">Subscribe for Sustainability Updates</h2>
+          <form class="row g-3 align-items-end" onsubmit="return false;">
+            <div class="col-12 col-sm">
+              <label class="newsletter-label visually-hidden" for="newsletter-email">Email address</label>
+              <input class="form-control newsletter-input" id="newsletter-email" type="email" autocomplete="email" placeholder="Enter your email" required />
+            </div>
+            <div class="col-12 col-sm-auto">
+              <button class="btn newsletter-button w-100" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
   </main>
 
   <footer class="site-footer">
     <img class="footer-logo" src="img/intel-header-logo.svg" alt="Intel Logo" />
+    <p class="footer-copyright">&copy; 2026 Intel Corporation</p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Contact</a>
+    </nav>
   </footer>
+
+  <div class="modal fade sustainability-modal" id="netZeroModal" tabindex="-1" aria-labelledby="netZeroModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="netZeroModalLabel">Net-Zero By 2040</h2>
+          <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img class="sustainability-modal-image" src="img/2022.jpg" alt="Image representing Intel's net-zero by 2040 commitment announced in 2022" />
+          <p>Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn modal-close-button" type="button" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade sustainability-modal" id="renewableModal" tabindex="-1" aria-labelledby="renewableModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="renewableModalLabel">Renewable Electricity</h2>
+          <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img class="sustainability-modal-image" src="img/2023.jpg" alt="Image representing Intel's renewable electricity achievement in 2023" />
+          <p>The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn modal-close-button" type="button" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade sustainability-modal" id="summitModal" tabindex="-1" aria-labelledby="summitModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="summitModalLabel">Sustainability Summit</h2>
+          <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img class="sustainability-modal-image" src="img/2024.jpg" alt="Image representing Intel's Sustainability Summit in 2024" />
+          <p>Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn modal-close-button" type="button" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>
